@@ -175,13 +175,14 @@ export const Footer: React.FC = () => {
             <p className="text-gray-400 mb-6">
               Subscribe to our newsletter for the latest AI insights and tech updates.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex gap-3">
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-3" noValidate>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
               />
               <motion.button
@@ -210,12 +211,12 @@ export const Footer: React.FC = () => {
               © {new Date().getFullYear()} WebStitch. All rights reserved. Made with ❤️ in Greater Noida.
             </div>
             <div className="flex gap-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+              <a href="#" onClick={(e) => { e.preventDefault(); alert('Privacy Policy page coming soon!'); }} className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+              </a>
+              <a href="#" onClick={(e) => { e.preventDefault(); alert('Terms of Service page coming soon!'); }} className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                 Terms of Service
-              </Link>
+              </a>
             </div>
           </div>
         </div>
