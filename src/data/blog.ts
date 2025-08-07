@@ -843,7 +843,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}`}
+      className={\`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]}`}
       disabled={disabled}
       onClick={onClick}
     >
@@ -3175,7 +3175,7 @@ module.exports = async function (context, req) {
     if (name) {
         context.res = {
             status: 200,
-            body: { message: `Hello, ${name}!` }
+            body: { message: \`Hello, ${name}!` }
         };
     } else {
         context.res = {
@@ -3315,7 +3315,7 @@ class RetryHandler {
         const delay = this.baseDelay * Math.pow(2, attempt);
         await this.sleep(delay);
         
-        console.log(`Retry attempt ${attempt + 1} after ${delay}ms`);
+        console.log(\`Retry attempt ${attempt + 1} after ${delay}ms`);
       }
     }
     
@@ -3513,7 +3513,7 @@ module.exports.handler = serverless(app);
 if (process.env.NODE_ENV === 'development') {
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+    console.log(\`Server running on port ${port}`);
   });
 }
 \`\`\`
@@ -3620,11 +3620,11 @@ class MetricsService {
   }
   
   async recordProcessingTime(functionName, duration) {
-    await this.recordMetric(`${functionName}.ProcessingTime`, duration, 'Milliseconds');
+    await this.recordMetric(\`${functionName}.ProcessingTime`, duration, 'Milliseconds');
   }
   
   async recordBusinessEvent(eventType) {
-    await this.recordMetric(`BusinessEvents.${eventType}`, 1);
+    await this.recordMetric(\`BusinessEvents.${eventType}`, 1);
   }
 }
 \`\`\`
