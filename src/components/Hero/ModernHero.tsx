@@ -110,7 +110,7 @@ export const ModernHero: React.FC = () => {
                     ease: "linear"
                   }}
                 >
-                  <Brain className="w-16 h-16 text-white" />
+                  <img src="/logo512.png" alt="WebStitch" className="w-16 h-16" />
                 </motion.div>
               </motion.div>
 

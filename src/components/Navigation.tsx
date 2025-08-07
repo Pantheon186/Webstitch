@@ -24,15 +24,13 @@ export const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <motion.div
-              className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"
+            <motion.img
+              src="/logo192.png"
+              alt="WebStitch Logo"
+              className="w-10 h-10"
               whileHover={{ rotate: 180 }}
               transition={{ duration: 0.3 }}
-            >
-              <div className="w-full h-full flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-            </motion.div>
+            />
             <span className="text-2xl font-bold text-gray-900 dark:text-white">
               WebStitch
             </span>

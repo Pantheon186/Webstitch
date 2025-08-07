@@ -61,15 +61,13 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-6">
-              <motion.div
-                className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg"
+              <motion.img
+                src="/logo512.png"
+                alt="WebStitch Logo"
+                className="w-10 h-10"
                 whileHover={{ rotate: 180 }}
                 transition={{ duration: 0.3 }}
-              >
-                <div className="w-full h-full flex items-center justify-center">
-                  <Code className="w-6 h-6 text-white" />
-                </div>
-              </motion.div>
+              />
               <span className="text-xl font-bold">WebStitch</span>
             </Link>
             
